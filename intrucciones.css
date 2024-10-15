@@ -1,0 +1,13 @@
+body{
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,0.66) 0%, rgba(255,254,254,0.6643032212885154) 39%, rgba(0,0,0,1) 100%);
+}
+a{
+    display: inline-block;
+    padding: 10px;
+    background: linear-gradient(90deg, rgba(0, 255, 213, 0.77) 0%, rgba(0, 0, 0, 0.77) 50%, rgba(174, 0, 255, 0.77) 100%);
+    position: fixed;
+}
+.pepo{
+    color: white;
+}
