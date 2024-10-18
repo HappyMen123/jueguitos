@@ -47,15 +47,12 @@ ul{
     justify-content: center;
 }
 .pedrito{
-    display: flex;
-    flex-direction: column;
-    background: rgb(221,120,246);
-    background: radial-gradient(circle, rgba(221,120,246,1) 20%, rgba(188,255,250,1) 50%, rgba(158,203,255,1) 70%);
-    align-items: center;
-    justify-content: center;
-    width: 90vw;
-    margin: 0px auto;
-    padding: 0px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(158, 203, 255, 1);
+  padding: 20px 10%;
 }
 .image-transparente{
     height: 30vh;
@@ -68,14 +65,7 @@ h3{
     color: black;
 }
 #tonotos{
-    height: 100vh;
-    width: 100vw;
-    background: rgb(255,0,0);
-    background: radial-gradient(circle, rgba(255, 0, 0, 0.623) 0%, rgba(205, 50, 50, 0.623) 50%, rgba(0, 0, 0, 0.623) 100%), url(img/fondo/descarga\ \(1\).jpg);
-    background-size: 1500px;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin: 0 auto;
+  padding: 20px 10%;
 }
 .DOOM{
     color: gold;
@@ -95,17 +85,13 @@ h3{
     justify-content: center;
 }
 .info{
-    width: 90vw;
-    margin: 0px auto;
-    background: rgb(148,187,233);
-    background: radial-gradient(circle, rgba(148,187,233,1) 0%, rgba(174,238,176,1) 100%);
-    padding: 0px 15px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-      
-        font-family: "Roboto", sans-serif;
-        font-weight: 700;
-        font-style: normal;
+    width:100% ;
+   color: #ebe4e4;
+  padding: 30px 10%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 22px;
 }
 ul{
     background: rgb(75,180,58);
@@ -176,84 +162,148 @@ ul{
     justify-content: center;
     padding: 10px;
 }
-.contenedor{
-    width: 90%;
-    margin: 25px auto;
-    display:grid;
-    grid-template-columns: 50% 1fr 1fr;
+.contenedor {
+  max-width: 75%;
+  margin: 25px auto;
+  display: grid;
+  grid-template-columns: 50% 1fr 1fr;
+  grid-template-rows: min-content;
+  gap: 0.9375rem;
+}
+
+.contenedor div {
+  padding: 15px 20px;
+  
+}
+div>img{
+  padding-top: 20px;
+}
+.griditem1 {
+   background: linear-gradient(
+      90deg,
+      #d3be9ec6 28%,
+      rgba(197, 232, 204, 0.642) 75%
+
+    )
+    
+}
+.griditem2 {
+  background: linear-gradient(
+      90deg,
+      rgba(214, 185, 205, 0.745) 28%,
+      rgba(246, 168, 236, 0.719) 75%
+    ),
+    url(img/kirby.png);
+}
+.griditem3 {
+  background: linear-gradient(
+      90deg,
+      rgba(255, 230, 0, 0.692) 28%,
+      rgba(255, 136, 0, 0.451) 75%
+    ),
+    url(img/Kratos.jpg);
+}
+.griditem4 {
+  background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.671) 28%,
+      rgba(99, 99, 99, 0.804) 50%,
+      rgba(136, 114, 114, 0.623) 75%
+    ),
+    url(img/silencio\ gil.jpg);
+  grid-column: 1/3;
+}
+.griditem5 {
+  background: linear-gradient(
+      90deg,
+      rgba(150, 194, 236, 0.734) 28%,
+      rgba(247, 246, 171, 0.61) 50%,
+      rgba(184, 232, 193, 0.89) 75%
+    ),
+    url(img/tlou.jpg);
+}
+body {
+  background-image: linear-gradient(rgb(0, 0, 255), rgb(0, 0, 0));
+  background-image: radial-gradient(rgb(0, 0, 255), rgb(0, 0, 0));
+}
+
+
+.contenedor2 {
+  width: 75%;
+  margin: 25px auto;
+  display: grid;
+  grid-template-columns: 50% 1fr 1fr;
+  grid-template-rows: min-content;
+  row-gap: 15px;
+  column-gap: 15px;
+}
+@media (width<900px) {
+  .contenedor {
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content;
-    row-gap: 15px;
-    column-gap: 15px;
+  }
+  .griditem5 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  .contenedor2{
+    grid-template-columns: 1fr ;
+  }
 }
-.contenedor div{
-    padding: 20px;
+
+@media (width<600px) {
+  .contenedor {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .griditem5,
+  .griditem2,
+  .griditem3 {
+    grid-column: 1/2;
+  }
+
+  
 }
-.griditem1{
-    padding: 10px;
-    background: linear-gradient(90deg, rgba(0, 255, 255, 0.451) 28%, rgba(174, 0, 255, 0.451) 75%), url(img/descarga\ \(4\).jpg);
+
+
+.malo1 {
+  background: linear-gradient(
+    rgb(111, 255, 159),
+    rgb(107, 107, 228),
+    rgb(17, 0, 255)
+  );
+  padding: 3px;
 }
-.griditem2{
-    background: linear-gradient(90deg, rgba(255, 0, 170, 0.451) 28%, rgba(255, 0, 221, 0.451) 75%), url(img/kirby.png);
+.malo2 {
+  background: linear-gradient(yellow, orange, red);
+  padding: 3px;
 }
-.griditem3{
-    background: linear-gradient(90deg, rgba(255, 230, 0, 0.692) 28%, rgba(255, 136, 0, 0.451) 75%), url(img/Kratos.jpg);
+.malo3 {
+  background: linear-gradient(grey, red, black);
+  padding: 3px;
 }
-.griditem4{
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.671) 28%, rgba(99, 99, 99, 0.61) 50%, rgba(136, 114, 114, 0.623) 75%), url(img/silencio\ gil.jpg);
-    grid-column: 1/3;
+.malo4 {
+  background: linear-gradient(rgb(22, 131, 0), yellow, orange);
+  padding: 3px;
 }
-.griditem5{
-    background: linear-gradient(90deg, rgba(62, 116, 0, 0.671) 28%, rgba(124, 123, 43, 0.61) 50%, rgba(223, 8, 8, 0.623) 75%), url(img/tlou.jpg);
+.REC, .no {
+  padding: 20px;
+  color: rgb(66, 255, 246);
 }
-body{
-    background-image: linear-gradient(rgb(0, 0, 255), rgb(0, 0, 0));
-    background-image: radial-gradient(rgb(0, 0, 255), rgb(0, 0, 0));
+.dino {
+  background-image: linear-gradient(orange, rgb(47, 148, 0));
+  background-image: radial-gradient(orange, rgb(47, 148, 0));
+  width: 100%;
+  padding: 30px;
+  text-align: center;
 }
-.contenedor2{
-    width: 90%;
-    margin: 25px auto;
-    display:grid;
-    grid-template-columns: 50% 1fr 1fr;
-    grid-template-rows: min-content;
-    row-gap: 15px;
-    column-gap: 15px;
+.copy { 
+ text-align: center;
+  color: rgb(66, 255, 246);
+  padding-bottom: 16px ;
 }
-.malo1{
-    background: linear-gradient(rgb(111, 255, 159), rgb(107, 107, 228), rgb(17, 0, 255));
-    padding: 3px;
-}
-.malo2{
-    background: linear-gradient(yellow, orange, red);
-    padding: 3px;
-}
-.malo3{
-    background: linear-gradient(grey, red, black);
-    padding: 3px;
-}
-.malo4{
-    background: linear-gradient(rgb(22, 131, 0), yellow, orange);
-    padding: 3px;
-}
-.REC{
-    padding: 20px;
-    color: rgb(66, 255, 246);
-}
-.dino{
-    background-image: linear-gradient(orange, rgb(47, 148, 0));
-    background-image: radial-gradient(orange, rgb(47, 148, 0));
-    display: flex;
-    justify-content: center;
-}
-.copy{
-    display: flex;
-    justify-content: center;
-    color:rgb(66, 255, 246);
-}
-.cl{
-    display: flex;
-    justify-content: center;
-    color: rgb(66, 255, 246);
-}
+
 .consola{
     display: grid;
     grid-template: minmax(300px, 1fr);
@@ -261,7 +311,4 @@ body{
 }
 .consola :nth-child(2), .consola :nth-child(3){
     padding-left: 20px;
-}
-.no{
-    color: rgb(66, 255, 246);
 }
